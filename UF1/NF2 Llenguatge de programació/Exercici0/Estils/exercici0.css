@@ -1,0 +1,97 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Tahoma;
+    font-size: 10pt;
+}
+
+article, header, section {
+    display: block;
+}
+
+#todo {
+    width: 980px;
+    margin: 10px auto 0px auto;
+}
+#todo>header {
+    margin-bottom: 10px;
+    height: 150px;
+}
+#logo {
+    float: left;
+    width: 289px;
+    height: 106px;
+    background-image: url('../imatges/logo-cepnet.png');
+    background-repeat: no-repeat;
+}
+#data {
+    float: right;
+}
+/***********************************************************************
+    Estils del calendari
+************************************************************************/
+.capsaleraCal {
+    background-color: rgb(42,28,183);
+    color: #Fff;
+}
+.siguienteCal {
+    color: #fff;
+}
+
+/**********************************************************************/
+section {
+    clear: both;
+    border: 1px solid rgb(42,28,183);
+    margin-bottom: 20px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+section header {
+    height: 30px;
+    background-color: rgb(42,28,183);
+    color: #Fff;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    border-radius: 5px 5px 0px 0px;
+}
+section article
+{
+    padding: 15px;
+}
+#cursMatriculat, #cursNou {
+    clear: none;
+    width: 480px;
+}
+#cursMatriculat {
+    float: left;
+}
+#cursNou {
+    float: right;
+}
+.etiquetes 
+{
+    display: inline-block;
+    width: 150px;
+}
+.text 
+{
+    display: inline-block;
+    width: 250px;
+}
+.error 
+{
+    display: inline-block;
+    color: rgb(255,129,0);
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.boto {
+    background-color: rgb(255,129,0);
+    color: #Fff;
+    padding: 0px 5px;
+    height: 30px;
+    margin-bottom: 10px;
+}

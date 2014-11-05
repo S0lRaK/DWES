@@ -1,0 +1,103 @@
+﻿* { /* html | body */
+    margin:0px;
+    padding:0px;
+    font-family:Tahoma;
+    font-size:10px;
+}
+article, header, section {
+    display:block;
+}
+#tot {
+    width:980px;
+    margin:10px auto 0px; /*top, right and left, bottom*/
+}
+/*header a primer nivell del div 'tot'*/
+#tot > header { /*fills directes?*/
+    margin-bottom:10px;
+    height:150px;
+}
+#logo {
+    float:left;
+    width:289px;
+    height:106px;
+    background-image:url(../imatges/logo-cepnet.png);
+    background-repeat:no-repeat;
+}
+#data {
+    float:right;
+}
+.calendarTitle {
+    background-color:rgb(42,28,183);
+    color:white;
+}
+section {
+    border:1px solid rgb(42,28,183);
+    border-top-left-radius:5px;
+    -webkit-border-top-left-radius:5px;
+    -moz-border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-top-right-radius:5px;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+section header {
+    height:30px;
+    background-color:rgb(42,28,183);
+    font-weight:bold;
+    color:white;
+    padding-top:8px;
+    padding-left:10px;
+    border-top-left-radius:5px;
+    -webkit-border-top-left-radius:5px;
+    -moz-border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-top-right-radius:5px;
+    box-sizing:border-box; /*padding and border are included in the box*/
+}
+section article {
+    padding:15px;
+}
+#sectionCursMatriculat {
+    width:480px;
+    float:left;
+}
+#sectionCursNou {
+    width:480px;
+    float:right;
+}
+#resum {
+    clear:both;
+}
+#CheckBoxListUFs {
+    margin-top:10px;
+}
+.rbList {
+    display:inline-block;
+}
+/*totes les etiquetes, excepte la de missatges*/
+.label {
+    display:inline-block;
+    width:150px;
+}
+/*totes les caixes de text i les caixes desplegables*/
+.txtBox_DropDownList {
+    display:inline-block;
+    width:250px;
+}
+/*label dels missatges i controls de validació*/
+.lblMsg_RequiredValid {
+    display:inline-block;
+    color:rgb(255, 129, 0);
+    font-weight:bold;
+    padding-left:5px;
+}
+.button {
+    height:30px;
+    background-color:rgb(255, 129, 0);
+    color:white;
+    padding-left:5px;
+    padding-right:5px;
+    margin-bottom:10px;
+}
