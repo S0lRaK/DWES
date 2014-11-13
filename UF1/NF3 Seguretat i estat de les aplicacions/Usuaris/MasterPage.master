@@ -6,6 +6,7 @@
     <head runat="server">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title></title>
+        <link href="Estils/usuaris.css" rel="stylesheet" />
         <asp:ContentPlaceHolder id="head" runat="server">
 
         </asp:ContentPlaceHolder>
@@ -15,21 +16,21 @@
             <div id="tot">
                 <header>
                     <div id="logo">
-                        <asp:Image ID="ImageLogo" runat="server" />
+                        <asp:Image ID="ImageLogo" runat="server" ImageUrl="~/Imatges/DAW2A_LOGO_BALNC.png" CssClass="imageLogo" />
                     </div>
                     <div id="sortir">
 
                     </div>
                 </header>
                 <nav>
-
+                    <asp:HyperLink ID="HyperLinkUsuaris" runat="server" NavigateUrl="Usuaris.aspx" CssClass="link">Usuaris</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLinkRols" runat="server" NavigateUrl="Rols.aspx" CssClass="link">Rols</asp:HyperLink>
                 </nav>
                 <section>
-
-                </section>
-                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolderSection" runat="server">
         
-                </asp:ContentPlaceHolder>
+                    </asp:ContentPlaceHolder>
+                </section>
             </div>
         </form>
     </body>
