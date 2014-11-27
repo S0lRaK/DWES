@@ -64,3 +64,25 @@ nav .link {
     text-align:center;
     border-radius:5px;
 }
+
+.panel {
+    padding:10px;
+    margin-top:5px;
+    border:1px black solid;
+}
+
+.label {
+    display:inline-block;
+    width:175px;
+}
+
+.txtBox {
+    display:inline-block;
+    width:200px;
+}
+
+.labelError {
+    display:inline-block;
+    margin-left:10px;
+    color:red;
+}
