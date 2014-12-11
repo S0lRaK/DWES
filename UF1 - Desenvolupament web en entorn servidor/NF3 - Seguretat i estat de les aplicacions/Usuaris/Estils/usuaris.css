@@ -81,7 +81,7 @@ nav .link {
     width:200px;
 }
 
-.labelError {
+.error {
     display:inline-block;
     margin-left:10px;
     color:red;

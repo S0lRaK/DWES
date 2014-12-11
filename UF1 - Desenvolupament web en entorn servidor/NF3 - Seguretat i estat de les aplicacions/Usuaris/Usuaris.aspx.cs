@@ -9,6 +9,10 @@ public partial class Usuaris : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if(!IsPostBack)
+        {
+            PanelUsuari.Visible = false;
+            PanelUsuaris.Visible = true;
+        }
     }
 }
