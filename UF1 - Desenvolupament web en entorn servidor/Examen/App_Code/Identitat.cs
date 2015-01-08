@@ -10,13 +10,6 @@ using Microsoft.AspNet.Identity.EntityFramework;
 /// </summary>
 static public class Identitat
 {
-	public Identitat()
-	{
-		//
-		// TODO: Agregar aquí la lógica del constructor
-		//
-	}
-
     static UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
     static UserManager<IdentityUser> userManager = new UserManager<IdentityUser>(userStore);
 
