@@ -9,34 +9,6 @@ using Microsoft.AspNet.Identity;
 
 public partial class Examen : System.Web.UI.Page
 {
-    static UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
-    static UserManager<IdentityUser> userManager = new UserManager<IdentityUser>(userStore);
-
-    static RoleStore<IdentityRole> roleStore = new RoleStore<IdentityRole>();
-    static RoleManager<IdentityRole> roleManager = new RoleManager<IdentityRole>(roleStore);
-
-    String[] nomUsuaris = { "adomingo", 
-                              "jserrano", 
-                              "csegura", 
-                              "umendez", 
-                              "amartinez", 
-                              "xgalcera", 
-                              "jlgarcia" };
-    String[] emailUsuaris = {"adomingo@cepnet.net", 
-                                "jserrano@cepnet.net", 
-                                "csegura@cepnet.net", 
-                                "umendez@cepnet.net", 
-                                "amartinez@cepnet.net",
-                                "xgalcera@cepnet.net",
-                                "jlgarcia@cepnet.net"};
-    String[] tlfUsuaris = {"93.445.12.67",
-                            "93.445.12.68",
-                            "93.445.12.69",
-                            "93.445.12.70",
-                            "93.445.12.71",
-                            "93.445.12.72",
-                            "93.445.12.73"};
-    
     protected void Page_Load(object sender, EventArgs e)
     {
         if(!IsPostBack)
@@ -47,10 +19,10 @@ public partial class Examen : System.Web.UI.Page
 
     private void mostrarDadesGrid()
     {
-        List<IdentityUser> users = userManager.Users.ToList();
+        List<IdentityUser> users = Identitat.llistarUsuaris();
         GridViewUsuaris.DataSource = users;
         GridViewUsuaris.DataBind();
-        List<IdentityRole> roles = roleManager.Roles.ToList();
+        List<IdentityRole> roles = Identitat.llistarRols();
         GridViewRols.DataSource = roles;
         GridViewRols.DataBind();
     }
@@ -58,19 +30,26 @@ public partial class Examen : System.Web.UI.Page
     protected void ButtonAltaUsuaris_Click(object sender, EventArgs e)
     {
         //List<IdentityUser> usuaris;
-        Byte index = 0;
+        //Byte index = 0;
 
-        foreach(String nomUsuari in nomUsuaris)
-        {
-            IdentityUser usuari = new IdentityUser();
+        //foreach(String nomUsuari in nomUsuaris)
+        //{
+        //    IdentityUser usuari = new IdentityUser();
             
-            usuari.UserName = nomUsuaris[index];
-            usuari.Email = emailUsuaris[index];
-            usuari.PhoneNumber = tlfUsuaris[index];
-            index++;
+        //    usuari.UserName = nomUsuaris[index];
+        //    usuari.Email = emailUsuaris[index];
+        //    usuari.PhoneNumber = tlfUsuaris[index];
+        //    index++;
 
-            userManager.Create(usuari, "Pepe11");
-        }
+        //    userManager.Create(usuari, "Pepe11");
+        //}
+        Identitat.agregarUsuaris("adomingo", "93.445.12.67");
+        Identitat.agregarUsuaris("jserrano", "93.445.12.68");
+        Identitat.agregarUsuaris("csegura", "93.445.12.69");
+        Identitat.agregarUsuaris("umendez", "93.445.12.70");
+        Identitat.agregarUsuaris("amartinez", "93.445.12.71");
+        Identitat.agregarUsuaris("xgalcera", "93.445.12.72");
+        Identitat.agregarUsuaris("jlgarcia", "93.445.12.73");
 
         mostrarDadesGrid();
     }
