@@ -60,4 +60,10 @@ public partial class Examen : System.Web.UI.Page
 
         mostrarDadesGrid();
     }
+    
+    protected void ButtonModificarUsuaris_Click(object sender, EventArgs e)
+    {
+        Identitat.modificarEmailUsuarisPerRol("mati");
+        mostrarDadesGrid();
+    }
 }

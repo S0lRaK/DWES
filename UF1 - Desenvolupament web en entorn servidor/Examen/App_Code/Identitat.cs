@@ -26,6 +26,13 @@ static public class Identitat
         return roleManager.Roles.ToList();
     }
 
+    static public List<IdentityUserRole> llistarUsuarisRol(String nomRol)
+    {
+        IdentityRole rol = roleManager.FindByName(nomRol);
+
+        return rol.Users.ToList();
+    }
+
     static public void agregarUsuaris(String nom, String tlf)
     {
         IdentityUser usuari = new IdentityUser();
@@ -55,5 +62,19 @@ static public class Identitat
         }
 
         roleManager.Create(rol);
+    }
+
+    static public void modificarEmailUsuarisPerRol(String nomRol)
+    {
+        List<IdentityUserRole> usuarisRol = Identitat.llistarUsuarisRol(nomRol);
+
+        foreach (IdentityUserRole usuariRol in usuarisRol)
+        {
+            IdentityUser usuari = userManager.FindById(usuariRol.UserId);
+
+            usuari.Email = usuari.UserName + "@gmail.com";
+
+            userManager.Update(usuari);
+        }
     }
 }
