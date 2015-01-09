@@ -36,4 +36,24 @@ static public class Identitat
 
         userManager.Create(usuari, "Pepe11");
     }
+
+    static public void agregarRols(String nomRol, List<String> usuaris)
+    {
+        IdentityRole rol = new IdentityRole();
+
+        rol.Name = nomRol;
+
+        foreach (String nomUsuari in usuaris)
+        {
+            IdentityUser usuari = userManager.FindByName(nomUsuari);
+            IdentityUserRole usuariRol = new IdentityUserRole();
+
+            usuariRol.RoleId = rol.Id;
+            usuariRol.UserId = usuari.Id;
+
+            rol.Users.Add(usuariRol);
+        }
+
+        roleManager.Create(rol);
+    }
 }
