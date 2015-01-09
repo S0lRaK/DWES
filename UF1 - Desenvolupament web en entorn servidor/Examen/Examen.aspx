@@ -15,7 +15,7 @@
             <asp:Button ID="ButtonAltaUsuaris" runat="server" Text="1) Alta usuaris" CssClass="button" OnClick="ButtonAltaUsuaris_Click" />
             <asp:Button ID="ButtonAltaRols" runat="server" Text="2) Alta Rols" CssClass="button" OnClick="ButtonAltaRols_Click" />
             <asp:Button ID="ButtonModificarUsuaris" runat="server" Text="3) Modificar Usuaris" OnClick="ButtonModificarUsuaris_Click" CssClass="button" />
-            <asp:Button ID="ButtonModificarRols" runat="server" Text="4) Modificar Rols" CssClass="button" />
+            <asp:Button ID="ButtonModificarRols" runat="server" Text="4) Modificar Rols" OnClick="ButtonModificarRols_Click" CssClass="button" />
             <asp:Button ID="ButtonEsborrarUsuaris" runat="server" Text="5) Esborrar Usuaris" CssClass="button" />
             <asp:Button ID="ButtonEsborrarRols" runat="server" Text="6) Esborrar Rols" CssClass="button" />
         </asp:Panel>

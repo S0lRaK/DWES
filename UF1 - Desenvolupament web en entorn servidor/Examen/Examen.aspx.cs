@@ -66,4 +66,14 @@ public partial class Examen : System.Web.UI.Page
         Identitat.modificarEmailUsuarisPerRol("mati");
         mostrarDadesGrid();
     }
+    
+    protected void ButtonModificarRols_Click(object sender, EventArgs e)
+    {
+        List<String> usuaris = new List<string>();
+        usu.Add("xgalcera");
+        usu.Add("jlgarcia");
+        usu.Add("csegura");
+
+        MiIdentity.AfegirUsuarisRol("mati", usu);
+    }
 }

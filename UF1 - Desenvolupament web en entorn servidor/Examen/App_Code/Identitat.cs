@@ -77,4 +77,9 @@ static public class Identitat
             userManager.Update(usuari);
         }
     }
+
+    static public void afegirUsuarisRol(String nomRol, List<String> usuaris)
+    {
+
+    }
 }
